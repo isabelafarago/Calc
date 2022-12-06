@@ -9,6 +9,7 @@ function Calcular(numero1, numero2, operacao){
     var expressao = num1 + operador + num2;
     resultado = eval(expressao);
     document.innerHTML = resultado;
+    if ((num1.length >0) && (num2.length >0)){ 
     var a = ("A soma entre "+num1+ " e "+num2+ " é: "+resultado);
 if (operador === "+"){
     document.getElementById('msg').innerHTML = a;
@@ -28,6 +29,8 @@ if (operador === "*"){
     document.getElementById('msg').innerHTML = m;
 
 }
-
+}else{
+    var aeo = ("Não deixe espaços em branco.");
+    document.getElementById('msg').innerHTML = aeo;
 }
-
+}
